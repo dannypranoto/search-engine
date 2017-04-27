@@ -1,0 +1,101 @@
+/*
+* Component: Pagination
+*/
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 10px 0;
+  border-radius: @btn-border-radius;
+
+  > li {
+    display: inline; // Remove list-style and block-level defaults
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: @btn-padding-vertical @btn-padding-horizontal;
+      line-height: @line-height-base;
+      text-decoration: none;
+      color: @greyish-brown;
+      background-color: @white;
+      border: 1px solid @gray;
+      margin-left: -1px;
+      border-left: none;
+      border-right: none;
+      .box-shadow(@btn-boxshadow);
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        margin-right: 5px;
+        .border-radius(@btn-border-radius);
+        border: 1px solid @gray;
+      }
+    }
+    &:nth-child(2) {
+      > a,
+      > span {
+        color: @tealish;
+        .border-radius(@btn-border-radius 0 0 @btn-border-radius);
+        border-left: 1px solid @gray;
+      }
+    }
+    &:nth-last-child(2) {
+      > a,
+      > span {
+        color: @tealish;
+        .border-radius(0 @btn-border-radius @btn-border-radius 0);
+        border-right: 1px solid @gray;
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        margin-left: 5px;
+        margin-right: 0;
+        .border-radius(@btn-border-radius);
+        border: 1px solid @gray;
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: @white;
+      background-color: @tealish;
+      border-color: @gray;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: @white;
+      background-color: @tealish;
+      border-color: @gray;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: @greyish-brown;
+      background-color: @white;
+      border-color: @gray;
+      cursor: not-allowed;
+    }
+  }
+}

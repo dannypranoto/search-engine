@@ -1,0 +1,12 @@
+.DS_Store
+__MACOSX
+npm-debug.log
+node_modules
+development/bower_components
+development/index.html
+development/application/app.env.js
+development/dist
+staging
+production
+test-results
+.idea

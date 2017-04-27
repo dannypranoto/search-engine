@@ -1,0 +1,31 @@
+.ic {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.ic__checkbox-check {
+  width: 32px;
+  height: 32px;
+  background-position: 0 0;
+}
+.ic__checkbox-unchecked {
+  width: 32px;
+  height: 32px;
+  background-position: -48px 0;
+}
+.ic__prism-logo {
+  width: 171px;
+  height: 32px;
+  background-position: -96px 0;
+}
+.ic__radio-checked {
+  width: 32px;
+  height: 32px;
+  background-position: -288px 0;
+}
+.ic__radio-unchecked {
+  width: 32px;
+  height: 32px;
+  background-position: -336px 0;
+}
+

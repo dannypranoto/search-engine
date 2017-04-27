@@ -1,0 +1,109 @@
+.center-element(@justify-content, @align-items, @flex-direction) {
+  display: flex !important;
+  align-items: @align-items;
+  justify-content: @justify-content;
+  flex-direction: @flex-direction;
+}
+
+.absolute-center {
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scrollable {
+  overflow: scroll !important;
+}
+
+.vertical-center-parent-element() {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.vertical-center-element() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.image-fit(@object-fit) {
+    width: 100%;
+    height: 100%;
+    object-fit: @object-fit;
+    object-position: 50% 50%;
+}
+
+.top-border {
+  border-top: 1px solid @border-color;
+}
+
+//border radius creator
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+//Different radius each side
+.border-radius(@top-left; @top-right; @bottom-left; @bottom-right) {
+  border-top-left-radius: @top-left;
+  border-top-right-radius: @top-right;
+  border-bottom-right-radius: @bottom-right;
+  border-bottom-left-radius: @bottom-left;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.ellipsis-text(@line-number) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-overflow: -o-ellipsis-lastline;
+	line-height: 1.4em;
+	max-height: 1.4em * @line-number;
+	// @supports (-webkit-line-clamp: @line-number) {
+		display: -webkit-box;
+		-webkit-line-clamp: @line-number;
+		-webkit-box-orient: vertical;
+	// }
+}
+
+.no-decoration {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.circle(@size) {
+  display: inline-block;
+  width: @size;
+  height: @size;
+  border-radius: @size * 2;
+}

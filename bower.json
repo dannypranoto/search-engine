@@ -1,0 +1,30 @@
+{
+  "name": "prism-dashboard",
+  "version": "0.1.22",
+  "description": "A dashboard for Prism's agent and merchant",
+  "author": [
+    "Danny Pranoto <danny.pranoto@midtrans.com>"
+  ],
+  "private": true,
+  "license": "Prism",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coralhq/prism-dashboard"
+  },
+  "dependencies": {
+    "angular": "1.5.0",
+    "angular-animate": "1.5.0",
+    "angular-sanitize": "~1.5.0",
+    "angular-ui-router": "^0.2.18",
+    "bootstrap": "~3.3.5"
+  },
+  "ignore": [
+    "**/.*",
+    "development/bower_components",
+    "node_modules"
+  ],
+  "resolutions": {
+    "angular": "1.5.0",
+    "jquery": "3.2.1"
+  }
+}

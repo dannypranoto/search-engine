@@ -1,0 +1,194 @@
+.separator {
+  width: 100% !important;
+  border-top: 1px solid #c9c9c9;
+}
+
+.margin {
+  &__top {
+    margin-top: 10px;
+    &--xs {
+      margin-top: 5px;
+    }
+    &--md {
+      margin-top: 15px;
+    }
+  }
+  &__bottom {
+    margin-bottom: 10px;
+    &--xs {
+      margin-bottom: 5px;
+    }
+    &--sm {
+      margin-bottom: 10px;
+    }
+    &--md {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.padding {
+    padding: 10px;
+    &--xs {
+      padding: 5px;
+    }
+    &--sm {
+      padding: 10px;
+    }
+    &--md {
+      padding: 15px;
+    }
+}
+
+.opacity {
+  &--4 {
+    opacity: 0.4;
+  }
+}
+
+.area-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.divider {
+  margin: 0 10px;
+  border-left: 1px solid rgba(34, 36, 38, 0.15);
+}
+
+.center-element--column {
+  .center-element(@justify-content: center, @align-items: center, @flex-direction: column);
+}
+
+.center-element--row {
+  .center-element(@justify-content: center, @align-items: center, @flex-direction: row);
+}
+
+.full-window {
+  width: 100vw;
+  height: 100vh;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.half-width {
+  width: 50% !important;
+}
+
+.bg-white {
+  background-color: @white;
+}
+
+// Hide elements by display none only
+.hide {
+  display: none !important;
+}
+
+// Remove borders
+.no-border {
+  border: 0 !important;
+}
+// Remove padding
+.no-padding {
+  padding: 0 !important;
+}
+// Remove margins
+.no-margin {
+  margin: 0 !important;
+}
+
+// Icons inside input
+.inner-addon {
+  position: relative;
+  &__input--left  {
+    padding-left: 30px;
+  }
+  &__input--left-double {
+    padding-left: 92px;
+  }
+  &__icon--left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 0px 10px;
+    z-index: 999;
+    line-height: 34px;
+  }
+  &__icon--left-second {
+    position: absolute;
+    top: 0px;
+    left: 43px;
+    padding: 0px 10px;
+    z-index: 999;
+    line-height: 34px;
+  }
+  &__icon--left-separator {
+    position: absolute;
+    height: 21px;
+    vertical-align: middle;
+    top: 12px;
+    left: 42px;
+    padding: 0px 10px;
+    z-index: 999;
+    line-height: 34px;
+    border-left: 1px solid #dedede;
+  }
+  &__input--right {
+    padding-right: 30px;
+  }
+  &__icon--right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px 10px;
+    line-height: 34px;
+  }
+  &__input-with-button--right {
+    padding-right: 100px;
+  }
+  &__button--right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px 5px;
+    line-height: 32px;
+    > button {
+      margin-bottom: 0;
+      padding: 2px 7px;
+    }
+  }
+  &--md {
+    .inner-addon__input--left  {
+      padding-left: 50px;
+    }
+    .inner-addon__input--right  {
+      padding-right: 50px;
+    }
+    .inner-addon__icon--left,
+    .inner-addon__icon--left-second,
+    .inner-addon__icon--right {
+      line-height: 45px;
+    }
+  }
+}
+
+.right-outer-addon {
+  position: relative;
+}
+.right-outer-addon > div {
+  width: ~"calc(100% - 40px)";
+}
+.right-outer-addon > i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  text-align: center;
+  line-height: 34px;
+}
+
+.border__right {
+  border-right: 1px solid @border-color;
+}

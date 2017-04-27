@@ -1,0 +1,65 @@
+html,
+body {
+  font-size: 14px;
+  min-height: 100%;
+  overflow: auto;
+}
+
+body {
+  font-family: 'Avenir Next LT Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: @greyish-brown;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: @link-color;
+  cursor: pointer;
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    color: @link-hover-color;
+  }
+}
+
+p {
+  word-break: break-all;
+}
+
+button {
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+hr {
+  width: 100%;
+  border-top: 1px solid @light-gray;
+}
+
+[ng-click] {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: @white;
+	  border-left: none;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: @warm-gray;
+}

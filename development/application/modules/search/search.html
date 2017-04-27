@@ -1,0 +1,42 @@
+<!-- Search Product -->
+<div class="search-product slide-left">
+  <div class="search-product__header no-border">
+    <input id="search-product-input" class="form-control search-product__input" placeholder="Search" ng-model="vm.searchQuery" ng-model-options="{debounce: 500}" ng-change="vm.searchProduct()"/>
+    <div class="search-product__nav">
+      <i class="ic ic__minimize ng-hide" ng-click="vm.minimize()" ng-show="vm.status.maximized"></i>
+      <i class="ic ic__maximize" ng-click="vm.maximize()" ng-show="!vm.status.maximized"></i>
+      <i class="ic ic__close" ng-click="vm.close()"></i>
+    </div>
+  </div>
+  <!-- Search Product Loader -->
+  <div class="search-product__body center-element--column text-center transition-switch transition fade in" ng-show="vm.status.loadingSearchProduct">
+    <i class="img img__preloader img__preloader--lg"></i>
+    <span>Searching your query...</span>
+  </div>
+  <!-- No Results Found -->
+  <div class="search-product__body center-element--column text-center transition-switch transition fade in" ng-show="vm.searchQuery && vm.searchList.length == 0 && !vm.status.loadingSearchProduct">
+    <i class="ic ic--3x ic__search-file"></i>
+    <span>No Results found!<br/>Please try another keyword</span>
+  </div>
+  <!-- Default Placeholder -->
+  <div class="search-product__body center-element--column text-center transition-switch transition fade in" ng-show="!vm.searchQuery && !vm.status.loadingSearchProduct">
+    <i class="ic ic--3x ic__search-file"></i>
+    <span>Search here</span>
+  </div>
+  <!-- Search Results -->
+  <div class="search-product__body transition-switch transition fade in" ng-show="vm.searchQuery && vm.searchList.length > 0 && !vm.status.loadingSearchProduct">
+    <div class="">Search result : {{vm.searchQuery}}</div>
+    <div id="search-product__list" class="search-product__list">
+      <div ng-repeat="item in vm.searchList" class="search-product__item">
+        <div class="search-product__item-body">
+          <div class="search-product__item-body-name">{{ item.title }}</div>
+          <div class="search-product__item-body-description">{{ item.description }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center clearfix" ng-show="vm.pagination.totalItems > vm.pagination.pageSize">
+    <pagination total-items="vm.pagination.totalItems" ng-model="vm.pagination.pageIndex" max-size="5" boundary-links="true" items-per-page="vm.pagination.pageSize" ng-change="vm.searchProduct()">
+    </pagination>
+  </div>
+</div>
