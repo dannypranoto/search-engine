@@ -2,11 +2,6 @@
 <div class="search-product slide-left">
   <div class="search-product__header no-border">
     <input id="search-product-input" class="form-control search-product__input" placeholder="Search" ng-model="vm.searchQuery" ng-model-options="{debounce: 500}" ng-change="vm.searchProduct()"/>
-    <div class="search-product__nav">
-      <i class="ic ic__minimize ng-hide" ng-click="vm.minimize()" ng-show="vm.status.maximized"></i>
-      <i class="ic ic__maximize" ng-click="vm.maximize()" ng-show="!vm.status.maximized"></i>
-      <i class="ic ic__close" ng-click="vm.close()"></i>
-    </div>
   </div>
   <!-- Search Product Loader -->
   <div class="search-product__body center-element--column text-center transition-switch transition fade in" ng-show="vm.status.loadingSearchProduct">
